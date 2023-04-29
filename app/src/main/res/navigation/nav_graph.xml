@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/sign_up_fragment">
+
+    <fragment
+        android:id="@+id/sign_up_fragment"
+        android:name="com.projects.healthzone.WelcomeFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_welcome">
+
+        <action
+            android:id="@+id/action_sign_up_fragment_to_calculatorFragment"
+            app:destination="@id/calculatorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calculatorFragment"
+        android:name="com.projects.healthzone.SignInFragment"
+        android:label="fragment_calculator"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_calculatorFragment_to_calculatorFragment2"
+            app:destination="@id/calculatorFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/calculatorFragment2"
+        android:name="com.projects.healthzone.CalculatorFragment"
+        android:label="fragment_calculator"
+        tools:layout="@layout/fragment_calculator" >
+        <action
+            android:id="@+id/action_calculatorFragment2_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.projects.healthzone.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <argument
+            android:name="bmi"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_resultFragment_to_workoutPlanFragment"
+            app:destination="@id/workoutPlanFragment" />
+        <action
+            android:id="@+id/action_resultFragment_to_finishFragment"
+            app:destination="@id/finishFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/workoutPlanFragment"
+        android:name="com.projects.healthzone.WorkoutPlanFragment"
+        android:label="WorkoutPlanFragment" >
+        <argument
+            android:name="bmi"
+            app:argType="float" />
+        <action
+            android:id="@+id/action_workoutPlanFragment_to_dietFragment"
+            app:destination="@id/dietFragment" />
+        <action
+            android:id="@+id/action_workoutPlanFragment_to_finishFragment"
+            app:destination="@id/finishFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dietFragment"
+        android:name="com.projects.healthzone.DietFragment"
+        android:label="DietFragment" >
+        <argument
+            android:name="bmi"
+            app:argType="float" />
+        <action
+            android:id="@+id/action_dietFragment_to_finishFragment"
+            app:destination="@id/finishFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/finishFragment"
+        android:name="com.projects.healthzone.FinishFragment"
+        android:label="FinishFragment" >
+        <argument
+            android:name="bmi"
+            app:argType="float" />
+        <action
+            android:id="@+id/action_finishFragment_to_calculatorFragment2"
+            app:destination="@id/calculatorFragment2"
+            app:popUpTo="@id/calculatorFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+</navigation>

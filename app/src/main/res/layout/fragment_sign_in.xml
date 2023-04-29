@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="247dp"
+        android:layout_height="241dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image" />
+
+    <TextView
+        android:id="@+id/signinText"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:text="Sign in"
+        android:textAlignment="center"
+        android:textColor="@color/light_blue"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+
+    <EditText
+        android:id="@+id/et_mail"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:hint="E-Mail"
+        android:paddingStart="8dp"
+        android:drawableTint="@color/light_blue"
+        android:drawableStart="@drawable/ic_baseline_email_24"
+        android:drawablePadding="4dp"
+        android:background="@drawable/edit_text_shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signinText" />
+
+    <EditText
+        android:id="@+id/et_pass"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:hint="Password"
+        android:drawableStart="@drawable/ic_baseline_key_24"
+        android:drawablePadding="4dp"
+        android:drawableTint="@color/light_blue"
+        android:paddingStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edit_text_shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_mail" />
+
+    <TextView
+        android:id="@+id/text_forgot_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/dark_blue"
+        android:text="Forgot password?"
+        app:layout_constraintStart_toStartOf="@+id/et_pass"
+        app:layout_constraintTop_toBottomOf="@+id/et_pass" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_continue"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:background="@drawable/button_rounded_shape"
+        android:text="sign in"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="46dp"
+        app:layout_constraintEnd_toEndOf="@+id/et_pass"
+        app:layout_constraintStart_toStartOf="@+id/et_pass"
+        app:layout_constraintTop_toBottomOf="@+id/text_forgot_pass" />
+
+    <TextView
+        android:id="@+id/alreadyLoggedText"
+        android:layout_width="190sp"
+        android:layout_height="wrap_content"
+        android:text="Don't have an account?"
+        android:textAlignment="center"
+        android:textColor="@color/light_blue"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button_continue"
+        app:layout_constraintStart_toStartOf="@+id/text_forgot_pass"
+        app:layout_constraintTop_toBottomOf="@+id/button_continue" />
+
+    <TextView
+        android:id="@+id/alreadyLoginText"
+        android:layout_width="60sp"
+        android:layout_height="wrap_content"
+        android:text="Sign up"
+        android:textAlignment="center"
+        android:textColor="@color/dark_blue"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/alreadyLoggedText"
+        app:layout_constraintTop_toBottomOf="@+id/button_continue" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
