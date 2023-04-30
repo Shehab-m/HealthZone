@@ -22,7 +22,9 @@
         tools:layout="@layout/fragment_sign_in" >
         <action
             android:id="@+id/action_calculatorFragment_to_calculatorFragment2"
-            app:destination="@id/calculatorFragment2" />
+            app:destination="@id/calculatorFragment2"
+            app:popUpTo="@id/sign_up_fragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/calculatorFragment2"

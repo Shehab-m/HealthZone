@@ -20,6 +20,78 @@
 
     </ImageView>
 
+    <RelativeLayout
+        android:id="@+id/male"
+        android:layout_width="150dp"
+        android:layout_height="130dp"
+        android:layout_above="@id/heightlayout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:layout_toStartOf="@id/centerverticalline"
+        android:background="@drawable/button_rounded_shape"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_above="@id/textmale"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/male" />
+
+        <TextView
+            android:id="@+id/textmale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:text="@string/male"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/female"
+        android:layout_width="150dp"
+        android:layout_height="130dp"
+        android:layout_above="@id/heightlayout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/button_rounded_shape"
+        android:layout_toEndOf="@id/centerverticalline"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_above="@id/textfemale"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/female" />
+
+        <TextView
+            android:id="@+id/textfemale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:text="@string/femaletext"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
     <TextView
         android:id="@+id/signinText"
         android:layout_width="200sp"

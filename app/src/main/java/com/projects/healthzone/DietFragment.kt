@@ -26,27 +26,48 @@ class DietFragment : Fragment() {
         var textResult = ""
 
         when {
-            (weight < 18.5) -> textResult = " * Bodyweight squats: 3-4 sets of 8-12 reps\n" +
-                    " * Push-ups: 3-4 sets of 8-12 reps\n" +
-                    " * Lunges: 3-4 sets of 8-12 reps per leg\n" +
-                    " * Dumbbell curls: 3-4 sets of 8-12 reps per arm\n" +
-                    " * Dumbbell shoulder press: 3-4 sets of 8-12 reps\n" +
-                    " * Pull-ups: 3-4 sets of 8-12 reps\n" +
-                    " * Deadlifts: 3-4 sets of 8-12 reps"
+            (weight < 18.5) -> textResult = "Breakfast :\n" +
+                    "( Oats(100g) _ Peanuts(50g) _ Milk(280g) _ Honey(15g) )\n" +
+                    "Total : 859 kcal\n" +
+                    "\n" +
+                    "Lunch : \n" +
+                    "( Chicken Breast(200g) _ White Rice(300g) )\n" +
+                    "Total : 777 kcal\n" +
+                    "\n" +
+                    "Dinner :\n" +
+                    "( Tuna in Water (Canned)(140g) _ Cottage Cheese(100g) _ Potato(200g) )\n" +
+                    "Total : 457 kcal \n" +
+                    "\n" +
+                    "Snacks/Other :\n" +
+                    "( Pita Bread(140g) _ Egg(200g) )\n" +
+                    "Total : 679 kcal \n" +
+                    "\n" +
+                    "Total Calories per day : 2800 kcal "
 
-            (weight > 25f) -> textResult = " * Jumping jacks: 3 sets of 20-30 reps\n" +
-                    " * Bodyweight squats: 3 sets of 10-15 reps\n" +
-                    " * High knees: 3 sets of 20-30 reps\n" +
-                    " * Push-ups: 3 sets of 10-15 reps\n" +
-                    " * Plank: 3 sets of 30-60 seconds\n" +
-                    " * Mountain climbers: 3 sets of 20-30 reps\n" +
-                    " * Burpees: 3 sets of 10-15 reps"
+            (weight > 25f) -> textResult = "Breakfast :\n" +
+                    "( Oats(50g) _ Peanuts(20g) _ Milk(150g) _ Honey(7g) )\n" +
+                    "Total : 448 kcal\n" +
+                    "\n" +
+                    "Lunch : \n" +
+                    "( Chicken Breast(150g) _ White Rice(150g) )\n" +
+                    "Total : 487 kcal\n" +
+                    "\n" +
+                    "Dinner :\n" +
+                    "( Tuna in Water (Canned)(140g) _ Cottage Cheese(100g) )\n" +
+                    "Total : 249 kcal \n" +
+                    "\n" +
+                    "Snacks/Other :\n" +
+                    "( Pita Bread(70g) _ Egg(100g) )\n" +
+                    "Total : 339 kcal \n" +
+                    "\n" +
+                    "Total Calories per day : 1500 kcal"
         }
 
         binding.textResult.text = textResult
 
         binding.buttonContinue.setOnClickListener {
-            Navigation.findNavController(binding.root).navigate(R.id.action_dietFragment_to_finishFragment)
+            Navigation.findNavController(binding.root)
+                .navigate(R.id.action_dietFragment_to_finishFragment)
 
         }
 

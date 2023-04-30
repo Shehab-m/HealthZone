@@ -19,8 +19,7 @@ class FinishFragment : Fragment() {
         binding = FragmentFinishBinding.inflate(inflater, container, false)
 
         binding.buttonFinish.setOnClickListener {
-            Navigation.findNavController(binding.root)
-                .navigate(R.id.action_finishFragment_to_calculatorFragment2)
+            Navigation.findNavController(binding.root).navigate(R.id.action_finishFragment_to_calculatorFragment2)
         }
 
 

@@ -1,5 +1,6 @@
 package com.projects.healthzone
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -14,6 +15,7 @@ import com.projects.healthzone.databinding.FragmentCalculatorBinding
 class CalculatorFragment : Fragment() {
     private lateinit var binding: FragmentCalculatorBinding
 
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
